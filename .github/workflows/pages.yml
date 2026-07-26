@@ -25,7 +25,7 @@ jobs:
       - name: Unpack the website
         run: |
           mkdir -p site
-          unzip -q -o "$(find . -name 'harusi-site.zip' | head -1)" -d site
+          unzip -q -o "$(find . -name 'harusi-site*.zip' | head -1)" -d site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
